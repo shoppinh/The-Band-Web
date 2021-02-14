@@ -1,38 +1,81 @@
-/* Reset CSS */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-#nav{
 
+html {
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-#nav li{
-	display: inline-block;
-}
-#nav .subnav{
-	display: none;
-	
-}
+body {}
 
-
-
-
-#wrapper{
-}
 #header {
-    width: 100%;
+    background: black;
     height: 46px;
-    background-color :black;
-    color: red;
 }
+
+#nav,
+.subnav {
+    list-style: none;
+}
+
+#nav>li {
+    display: inline-block
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 16px;
+    display: block;
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+#nav>li:hover>a,
+#nav .subnav li:hover {
+    background-color: #645861;
+    color: black;
+}
+
+#nav .subnav {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+
+#nav .subnav a {
+    color: black;
+    padding: 0 8px;
+}
+
+
+
+
+
+
 #slider {
-
+    height: 500px;
 }
-#content{
 
-}
-#footer{
+#content {}
 
-}
+#footer {}
