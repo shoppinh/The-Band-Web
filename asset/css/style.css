@@ -6,11 +6,47 @@
 
 html {
   font-family: Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
 }
+
 
 body {
 }
+/* Common classes*/
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.col {
+    float : left;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-3 {
+    width: calc(100%/3);
+}
+.col-2 {
+    width: 50%;
+}
+.col-full {
+    width: 100%;
+}
+.text-center {
+    text-align: center !important; 
+}
+.mt-10 {
+    margin-top: 10px !important;
+}
+.row::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.float-right {
+    float: right;
+}
 
+/* Main*/
 #header {
   background: black;
   height: 46px;
@@ -111,9 +147,174 @@ body {
 }
 
 #content {
-  height: 1000px;
-  background-color: chocolate;
+}
+#content .about-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+#content .content-section {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0 112px;
+  text-align: center;
+}
+#content .section-heading {
+  font-size: 32px;
+  font-family: monospace;
+  text-align: center;
+}
+
+#content .section-subheading {
+  padding-top: 32px;
+  font-style: italic;
+}
+
+#content .about-text {
+  text-align: justify;
+  padding-top: 16px;
+  line-height: 1.4;
+}
+#content .team-section {
+  margin-top: 48px;
+  
+}
+
+#content .member-name {
+  font-size: 15px;
+  margin-bottom: 10px;
+
+}
+#content .member-img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+#content .tour-section {
+  background-color: #2d2d30;
+  color: #fff;
+}
+
+#content .tour-section li {
+  list-style-type: none;
+}
+#content .content-section .list-group {
+  text-align: left;
+  margin-top: 12px;
+  line-height: 32px;
+  color: black;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.label-danger {
+  background-color: #d9534f;
+}
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
+}
+.list-group-item > .badge {
+  float: right;
+}
+#content .tour-image-group {
+  margin-top: 48px ;
+}
+#content .thumbnail {
+  display: block;
+  padding-bottom: 15px;
+  line-height: 1.42857143;
+  background-color: #ddd;
+}
+.thumbnail p {
+  color: #555;
+  margin-top: 15px;
+  font-style: italic;
+}
+#content .thumbnail > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#content .thumbnail img:hover {
+    opacity: 0.6;
+}
+.btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 0;
+  transition: 0.2s;
+}
+
+#content .contact-section {
+  background-color: #fff;
+  color: black;
+}
+#content .contact-content {
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.4;
+}
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form .form-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.img-section {
+    width: 100%;
 }
 
 #footer {
+    padding: 64px 16px;
+    text-align: center;
+
+}
+#footer .social-list {
+    font-size: 24px;
+} 
+#footer a {
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+#footer  a:hover {
+    opacity: 0.4;
+}
+#footer .copyright {
+    margin-top: 15px;
 }
