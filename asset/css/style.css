@@ -290,6 +290,7 @@ body {
   color: #f1f1f1;
   border-radius: 0;
   transition: 0.2s;
+  -webkit-appearance: none;
 }
 
 #content .contact-section {
@@ -307,6 +308,13 @@ body {
 .contact-info i {
   width: 30px;
   display: inline-block;
+}
+.contact-info a {
+  color: #101aef;
+  opacity: 0.8;
+}
+.contact-info a:hover {
+  opacity: 1;
 }
 .contact-form .form-control {
   padding: 11px;
@@ -335,6 +343,36 @@ body {
   margin-top: 15px;
 }
 /* Responsive design*/
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .contact-info {
+    line-height: 2;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+  .btn {
+    padding: 15px 20px;
+  }
+  .contact-form .form-control {
+    padding: 15px;
+  }
+
+  #footer .social-list,
+  #footer .copyright {
+    font-size: 48px;
+  }
+  #footer .social-list a {
+    margin: 0 8px;
+  }
+  #footer .copyright a {
+    padding: 15px 0;
+    display: inline-block;
+  }
+}
+
 /* Mobile*/
 @media (max-width: 740px) {
   .s-full-width,
@@ -360,6 +398,10 @@ body {
   }
   #header .search-btn {
     display: none;
+  }
+  #slider .text-content {
+    font-size: 14px;
+    bottom: 4px;
   }
   #nav {
     display: block;
