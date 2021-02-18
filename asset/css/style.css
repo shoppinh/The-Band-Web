@@ -38,6 +38,9 @@ body {
 .mt-10 {
   margin-top: 10px !important;
 }
+.mt-16 {
+  margin-top: 16px !important;
+}
 .row::after {
   content: "";
   display: block;
@@ -56,7 +59,12 @@ body {
   left: 0;
   right: 0;
   z-index: 1;
-  overflow: hidden;
+}
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
 #header .mobile-menu-btn,
 #header .search-btn {
@@ -167,7 +175,7 @@ body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 20px 112px;
+  padding: 64px 20px 64px;
   text-align: center;
 }
 #content .section-heading {
@@ -187,7 +195,7 @@ body {
   line-height: 1.4;
 }
 #content .team-section {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 #content .member-name {
@@ -254,7 +262,7 @@ body {
   float: right;
 }
 #content .tour-image-group {
-  margin-top: 48px;
+  margin-top: 16px;
 }
 #content .thumbnail {
   display: block;
@@ -302,7 +310,7 @@ body {
 }
 .contact-form .form-control {
   padding: 11px;
-  border: 1px solid #ccc;
+  border: 2px solid black;
   width: 100%;
 }
 .img-section img {
@@ -329,12 +337,47 @@ body {
 /* Responsive design*/
 /* Mobile*/
 @media (max-width: 740px) {
-  #nav > li {
+  .s-full-width,
+  .s-col-full {
+    width: 100% !important;
+  }
+  .s-mt-16 {
+    margin-top: 16px;
+  }
+  .s-mt-8 {
+    margin-top: 8px;
+  }
+  #header {
+    overflow: hidden;
+  }
+  #header .subnav {
+    position: initial;
+    background: #333;
+  }
+
+  #header .mobile-menu-btn {
     display: block;
   }
   #header .search-btn {
     display: none;
   }
-  #header .mobile-menu-btn {
+  #nav {
+    display: block;
+  }
+  #nav > li {
+    display: block;
+  }
+  #nav > li:first-child {
+    display: inline-block;
+  }
+  #nav .subnav a {
+    color: #fff;
+    padding: 0 41px;
+  }
+  #content .member-img {
+    width: 60%;
+  }
+  #content .contact-form {
+    margin-top: 16px;
   }
 }

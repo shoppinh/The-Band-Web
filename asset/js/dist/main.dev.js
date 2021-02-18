@@ -19,7 +19,13 @@ var mobile_refs = document.querySelectorAll('#nav li a[href*="#"]');
 for (var i = 0; i < mobile_refs.length; i++) {
   var menuItem = mobile_refs[i];
 
-  menuItem.onclick = function () {
-    header.style.height = "".concat(currentHeight, "px");
+  menuItem.onclick = function (event) {
+    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+    if (isParentMenu) {
+      event.preventDefault();
+    } else {
+      header.style.height = "".concat(currentHeight, "px");
+    }
   };
 }
